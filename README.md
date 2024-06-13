@@ -9,7 +9,7 @@
 <!-- [Project](https://sites.google.com/) **|** [Paper](https://aip.scitation.org/doi/full/10.1063/5.0020404/) -->
 
 [Christian Huber](https://www.researchgate.net/profile/Christian-Huber-21), 
-[Bernhar Lehner](https://www.researchgate.net/profile/Bernhard-Lehner-2), 
+[Bernhard Lehner](https://www.researchgate.net/profile/Bernhard-Lehner-2), 
 [Claus Hofmann](https://www.claus-hofmann.com/), 
 [Wei Lin](https://wlin-at.github.io/),
 [Bernhard Moser](https://www.researchgate.net/profile/Bernhard-Moser-4), 
@@ -55,7 +55,7 @@ This repository containes the nessesary code to reproduce the results of the "Ov
 -   Python (tested with Python3.11)
 -   [Hyperpyper](https://github.com/berni-lehner/hyperpyper)
 -   [Shapetastic](https://github.com/berni-lehner/shapetastic)
--   [Hopfield-Boodting](https://github.com/ml-jku/hopfield-boosting)
+-   [Hopfield-Boosting](https://github.com/ml-jku/hopfield-boosting)
 
 ## Getting started
 
