@@ -1,0 +1,75 @@
+default_language_version:
+    python: python3.11
+
+exclude: "ood_robustness/_modidx.py"
+
+repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v4.5.0
+      hooks:
+          # list of supported hooks: https://pre-commit.com/hooks.html
+          - id: check-added-large-files
+            args: ["--maxkb=10240"]
+          - id: check-case-conflict
+          - id: fix-encoding-pragma
+            args: ["--remove"]
+          - id: trailing-whitespace
+          - id: check-xml
+          - id: check-yaml
+          - id: check-toml
+          - id: check-json
+          - id: check-symlinks
+          - id: mixed-line-ending
+          - id: end-of-file-fixer
+          - id: detect-private-key
+
+    # python import sorting
+    - repo: https://github.com/PyCQA/isort
+      rev: 5.13.2
+      hooks:
+          - id: isort
+
+    # python autoformating
+    - repo: https://github.com/asottile/pyupgrade
+      rev: v3.15.1
+      hooks:
+          - id: pyupgrade
+            args: [--py310-plus]
+
+    - repo: https://github.com/psf/black
+      rev: 24.2.0
+      hooks:
+          - id: black
+
+    # clear notebooks
+    - repo: https://github.com/fastai/nbdev
+      rev: 2.3.13
+      hooks:
+          - id: nbdev_clean
+          - id: nbdev_export
+
+    - repo: https://github.com/nbQA-dev/nbQA
+      rev: 1.5.3
+      hooks:
+          - id: nbqa-black
+          - id: nbqa-isort
+
+    # python code analysis
+    - repo: https://github.com/pycqa/flake8
+      rev: 7.0.0
+      hooks:
+          - id: flake8
+
+    - repo: https://github.com/pre-commit/mirrors-pylint
+      rev: v3.0.0a5
+      hooks:
+          - id: pylint
+            exclude: "tests/"
+
+    # Check commit message
+    - repo: https://github.com/compilerla/conventional-pre-commit
+      rev: v3.1.0
+      hooks:
+          - id: conventional-pre-commit
+            stages: [commit-msg]
+            args: [] # optional: list of Conventional Commits types to allow

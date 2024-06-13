@@ -1,0 +1,10 @@
+name: "JPEG Compression"
+function:
+    _target_: ood_robustness.experiment.multi_aggregation
+    _partial_: true
+    label_template: "Quality={:.2f}"
+    param_name: "quality"
+    alphas: [100, 90, 80, 70, 60, 50, 40, 30]
+    build_transform_fns:
+      _target_: hyperpyper.transforms.JPEGCompressionTransform
+      _partial_: true

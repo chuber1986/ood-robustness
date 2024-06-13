@@ -1,0 +1,11 @@
+name: POEMModel
+create:
+  _target_: ood_robustness.model.OODModelUtil
+  _partial_: true
+  model_path: ${oc.env:POEM_MODEL_PATH,/path/to/model}
+  version: POEM_variance_2
+  load_weights: true
+  load_embeddings: true
+  use_cifar10_idd: true
+  use_imagenet_ood: true
+  device: ${device}

@@ -1,0 +1,4 @@
+name: "Raw"
+function:
+    _target_: ood_robustness.experiment.single_aggregation
+    _partial_: true

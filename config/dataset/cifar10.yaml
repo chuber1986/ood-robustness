@@ -1,0 +1,9 @@
+defaults:
+  - defaults/defaults
+  - _self_
+
+name: CIFAR10
+
+root:
+  _args_:
+    - ${oc.env:CIFAR10_ROOT,/path/to/dataset}/test

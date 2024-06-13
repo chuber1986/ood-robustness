@@ -1,0 +1,11 @@
+name: HopfieldBoosting
+create:
+  _target_: ood_robustness.model.OODModelUtil
+  _partial_: true
+  model_path: ${oc.env:HB_MODEL_PATH,/path/to/model}
+  version: h3iw5l73
+  load_weights: true
+  load_embeddings: true
+  use_cifar10_idd: true
+  use_imagenet_ood: true
+  device: ${device}

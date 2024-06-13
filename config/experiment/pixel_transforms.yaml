@@ -1,0 +1,17 @@
+name: "Change Single Pixel"
+function:
+  _target_: ood_robustness.experiment.advanced_pixel_experiments
+  _partial_: true
+  label_dec:
+    _target_: hyperpyper.utils.FileToClassLabelDecoder
+    parts_idx: -2
+  transformer_fns:
+    "Pixel To 0":
+      _target_: torch.zeros_like
+      _partial_: true
+    "Pixel To 1":
+      _target_: torch.ones_like
+      _partial_: true
+    "Pixel To Inv":
+      _target_: ood_robustness.utils.pixels.inv_pixel
+      _partial_: true

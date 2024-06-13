@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ood_robustness"
+dynamic = ["version"]
+requires-python = ">=3.8"
+authors = [{ name = "Christian Huber" }]
+maintainers = [{ name = "Christian Huber" }]
+description = { file = "README.md" }
+readme = { file = "README.md" }
+license = { file = "LICENSE" }
+keywords = ["ood", "robustness", "neural networks", "deep learning", "machine learning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+]

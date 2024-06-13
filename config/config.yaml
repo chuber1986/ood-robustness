@@ -1,0 +1,21 @@
+defaults:
+  - experiment: ???
+  - dataset: ???
+  - model: ???
+  - _self_
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled
+
+title: ${model.name} - ${dataset.name} - ${experiment.name}
+out_path: ${oc.env:OUTPUT_PATH,./output}
+
+device: cuda:0  # cpu
+
+n_samples: 10000
+batch_size: 1000
+n_plot_samples: 10
+
+num_workers: 0
+num_processes: 0
+
+random_seed: 42

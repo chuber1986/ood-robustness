@@ -1,0 +1,9 @@
+defaults:
+  - defaults/defaults
+  - _self_
+
+name: ImageNet
+
+root:
+  _args_:
+    - ${oc.env:IMAGENET_ROOT,/path/to/dataset}/test

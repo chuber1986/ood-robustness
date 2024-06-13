@@ -1,0 +1,9 @@
+defaults:
+  - defaults/defaults
+  - _self_
+
+name: Shapetastic_50k_gs
+
+root:
+  _args_:
+    - ${oc.env:SHAPETASTIC_ROOT,/path/to/dataset}/shapetastic_50k_gs

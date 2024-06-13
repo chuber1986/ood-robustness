@@ -1,0 +1,13 @@
+# @package _global_
+dataset:
+  name: ???
+
+  root:
+    _target_: pathlib.Path
+    _args_:
+      - ???
+
+  extensions:
+    - ".png"
+    - ".jpeg"
+    - ".jpg"

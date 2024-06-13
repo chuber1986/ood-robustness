@@ -1,0 +1,16 @@
+name: "Gaussian Blur"
+function:
+    _target_: ood_robustness.experiment.multi_aggregation
+    _partial_: true
+    label_template: "Sigma={:.2f}"
+    param_name: "sigma"
+    alphas:
+      _target_: numpy.linspace
+      start: 0.1
+      stop: 2.1
+      num: 11
+      endpoint: true
+    build_transform_fns:
+      _target_: torchvision.transforms.GaussianBlur
+      _partial_: true
+      kernel_size: 33
