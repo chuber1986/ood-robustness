@@ -11,7 +11,8 @@ from functools import partial
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from plot_utils import create_sample
+from plot_utils import create_sample # requires the https://github.com/berni-lehner/shapetastic repository in PYTHONPATH
+# from shapetastic.plot_utils import create_sample
 from hyperpyper.utils import VisionDatasetDumper
 from torchvision.datasets import VisionDataset, CIFAR10
 from torchvision.transforms import ToPILImage
